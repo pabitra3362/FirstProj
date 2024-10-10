@@ -33,7 +33,7 @@ function Contact() {
 
   return (
     <div>
-      <div className="container min-h-[83vh]">
+      <div className="container min-h-[78vh] md:min-h-[89vh] lg:min-h-[83vh]">
           <h2 className="text-3xl  text-white text-center my-3">Contact Us</h2>
           <h3 className='text-white text-2xl my-2 mx-auto w-fit md:text-3xl lg:text-5xl'>Do you have queries?</h3>
           <div className="form p-2 w-fit mx-auto">

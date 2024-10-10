@@ -58,7 +58,7 @@ function Cart() {
 
 
   return (
-    <div className='container min-h-[83vh]'>
+    <div className='container min-h-[78vh] md:min-h-[89vh] lg:min-h-[83vh]'>
       <div className='flex justify-center items-center flex-wrap gap-4'>
 
         {carts.length == 0 ? <div className='text-2xl font-bold p-4 rounded-xl border-2 border-white text-white h-48 flex items-center w-fit absolute top-56 '> There is no item to display</div> : carts.map((item) => {
