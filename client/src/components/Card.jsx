@@ -9,16 +9,12 @@ import 'react-toastify/dist/ReactToastify.css';
 
 function Card() {
 
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState(useSelector(state=>state.products.value))
   const isLogin=useSelector(state=>state.auth.status)
   const email=useSelector(state=>state.auth.email)
   const [message, setMessage] = useState("")
 
-    useEffect(()=>{
-      axios.post("http://localhost:3000/api/products")
-      .then(response=>response.data)
-      .then(data=>setProducts(data))
-    },[])
+  
     
     const handleCart=async(item) => {
       if (!isLogin) {
@@ -49,7 +45,7 @@ function Card() {
     
 
   return (
-    <div className='grid grid-cols-4 gap-y-5 justify-evenly items-center'>
+    <div className='grid grid-cols-1 gap-y-5 justify-evenly items-center md:grid-cols-2 lg:grid-cols-4 duration-200'>
       {products.length!=0 && products.map((item)=>{
         return <div key={item._id} className="card p-2 w-64 border-2 border-white mx-auto">
         <div className="img w-60 h-48 overflow-hidden border-2 border-white">

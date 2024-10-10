@@ -37,12 +37,12 @@ function Login() {
 
   return (
     <div className="container min-h-[83vh] flex justify-center items-center">
-      <div className="form p-3  w-fit mx-auto border-2 border-white ">
+      <div className="form p-3  w-[80vw] mx-auto border-2 border-white  md:w-fit">
         <h2 className='text-5xl text-white font-bold my-5 text-center'>LogIn</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Input {...register("email")} placeholder='Enter your email' className='w-[50vw]' type='email' />
-            <Input {...register("password")} placeholder='Enter your password' className='w-[50vw]' type='password' />
-            <Button className='border-2 border-white w-[50vw] duration-500' name='LogIn' disable={isSubmitting ?  "true" : "false"}/>
+            <Input {...register("email")} placeholder='Enter your email' className='w-[70vw] md:w-[60vw]' type='email' />
+            <Input {...register("password")} placeholder='Enter your password' className='w-[70vw] md:w-[60vw]' type='password' />
+            <Button className='border-2 border-white w-[70vw] duration-500 md:w-[60vw]' name='LogIn' disable={isSubmitting ?  "true" : "false"}/>
           </form>
         </div>
         {/* {isSubmitted && alert('registered successfully')} */}

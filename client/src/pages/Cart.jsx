@@ -61,7 +61,7 @@ function Cart() {
     <div className='container min-h-[83vh]'>
       <div className='flex justify-center items-center flex-wrap gap-4'>
 
-        {carts.length == 0 ? <div className='text-3xl p-4 rounded-xl border-2 border-white text-white h-48 flex items-center w-fit absolute top-56 '> There is no item to display</div> : carts.map((item) => {
+        {carts.length == 0 ? <div className='text-2xl font-bold p-4 rounded-xl border-2 border-white text-white h-48 flex items-center w-fit absolute top-56 '> There is no item to display</div> : carts.map((item) => {
           return <div key={item._id} className="card p-2 w-64 border-2 border-white mx-auto">
             <div className="img w-60 h-48 overflow-hidden border-2 border-white">
               <img className='w-60 h-48 ' loading='lazy' src={item.image} alt="gaming image" />
@@ -92,7 +92,7 @@ function Cart() {
         })}
 
       </div>
-      {carts.length!=0 && <div className='text-3xl border-2 border-white p-4 rounded-lg text-center text-white w-[50vw] mx-auto mt-10'>Total to pay : {totalPay()}</div>}
+      {carts.length!=0 && <div className='text-xl border-2 border-white p-4 rounded-lg text-center text-white w-[70vw] mx-auto my-10 md:text-2xl lg:w-[50vw] lg:text-2xl'>Total to pay : {totalPay()}</div>}
     </div>
   )
 }

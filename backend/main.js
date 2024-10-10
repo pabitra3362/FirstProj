@@ -18,11 +18,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.post('/api/products', async (req, res) => {
-    const product = await model.Products.find({})
-    res.json(product)
 
-})
 app.post('/register', async (req, res) => {
    try {
     const data=req.body

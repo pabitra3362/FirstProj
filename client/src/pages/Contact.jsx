@@ -35,13 +35,13 @@ function Contact() {
     <div>
       <div className="container min-h-[83vh]">
           <h2 className="text-3xl  text-white text-center my-3">Contact Us</h2>
-          <h3 className='text-7xl text-white text-center my-3'>Do you have queries?</h3>
-        <div className="form p-2  w-fit mx-auto">
+          <h3 className='text-white text-2xl my-2 mx-auto w-fit md:text-3xl lg:text-5xl'>Do you have queries?</h3>
+          <div className="form p-2 w-fit mx-auto">
           <form onSubmit={onSubmit}>
-            <Input placeholder='Enter your full name' className='w-[50vw]' name='Name' />
-            <Input placeholder='Enter your email' className='w-[50vw]' type='email' name='Email' />
-            <textarea placeholder='Description' className='w-[50vw] h-44 p-3 text-lg font-bold rounded-lg my-3' name='Description' required></textarea>
-            <Button className='border-2 border-white w-[50vw] duration-500' name='Send' />
+            <Input placeholder='Enter your full name' className='w-[70vw] lg:w-[60vw]' name='Name' />
+            <Input placeholder='Enter your email' className='w-[70vw] lg:w-[60vw]' type='email' name='Email' />
+            <textarea placeholder='Description' className='w-[70vw] lg:w-[60vw] h-44 p-3 text-lg font-bold rounded-lg my-3' name='Description' required></textarea>
+            <Button className='border-2 border-white w-[70vw] duration-500 lg:w-[60vw]' name='Send' />
           </form>
         </div>
       </div>
