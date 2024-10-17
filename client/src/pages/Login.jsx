@@ -20,7 +20,7 @@ function Login() {
   const dispatch=useDispatch()
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:3000/auth",data)
+    axios.post("https://sticky-sky-handspring.glitch.me/auth",data)
     .then((response)=>response.data)
     .then(data=>{
       if(data.message==="login success"){

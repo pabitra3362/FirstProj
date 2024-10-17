@@ -24,17 +24,17 @@ function Card() {
 
     try {
         
-        const response = await axios.post("http://localhost:3000/addToCart", { ...item, email });
+        const response = await axios.post("https://sticky-sky-handspring.glitch.me/addToCart", { ...item, email });
         const data=await response.data
         if(data){
           setMessage(data.message)
+          toast(data.message)
         }
         
     } catch (error) {
         console.error("Error adding item to cart:", error);
         alert("Failed to add item to cart. Please try again.");
     }
-      toast(message)
       
     }
 
@@ -67,7 +67,7 @@ function Card() {
         </div>
       </div>
       })}
-      <ToastContainer position="top-center"/>
+      <ToastContainer position="top-right"/>
     </div>
   )
 }

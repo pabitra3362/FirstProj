@@ -10,7 +10,7 @@ function Cart() {
 
 
   useEffect(()=>{
-    axios.post("http://localhost:3000/showCarts",{email})
+    axios.post("https://sticky-sky-handspring.glitch.me/showCarts",{email})
     .then(response=>response.data)
     .then(data=>setCarts(data))
   },[])
@@ -29,7 +29,7 @@ function Cart() {
     })
     setCarts(arr)
     
-    axios.post('http://localhost:3000/changeCart',arr)
+    axios.post('https://sticky-sky-handspring.glitch.me/changeCart',arr)
     .then(response=>response.data)
     .then(data=>console.log(data))
   }
@@ -37,7 +37,7 @@ function Cart() {
 
   const handleDelete = (item) => {
     setCarts(carts.filter(cartItem => cartItem._id !== item._id))
-    axios.post("http://localhost:3000/deleteCart",item)
+    axios.post("https://sticky-sky-handspring.glitch.me/deleteCart",item)
     .then(response=>response.data)
     .then(data=>console.log(data))
   }
