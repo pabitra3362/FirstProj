@@ -24,7 +24,7 @@ function Card() {
 
     try {
         
-        const response = await axios.post("https://sticky-sky-handspring.glitch.me/addToCart", { ...item, email });
+        const response = await axios.post("http://localhost:3000/addToCart", { ...item, email });
         const data=await response.data
         if(data){
           setMessage(data.message)

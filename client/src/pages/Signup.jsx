@@ -17,7 +17,7 @@ function Signup() {
       const navigate=useNavigate()
 
       const onSubmit = (data) => {
-        axios.post("https://sticky-sky-handspring.glitch.me/register",data)
+        axios.post("http://localhost:3000/register",data)
         .then((response)=>response.data)
         .then(data=>{
           if(data.message=="User already exist"){
