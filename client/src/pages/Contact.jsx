@@ -22,7 +22,7 @@ function Contact() {
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      alert(`${result}`)
+      alert("Form Submitted Successfully")
       event.target.reset();
     } else {
       console.log("Error", data);
