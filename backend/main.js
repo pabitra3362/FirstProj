@@ -79,7 +79,7 @@ app.post('/changeCart',async (req,res)=>{
     const carts=await model.Carts.insertMany(data)
     res.json({message:"Cart updated"})
     } catch (error) {
-        console.log('error in changeCart: error');
+        console.log('error in changeCart: ',error.message);
         return res.json({message:'server error during changeCart'})
         
     }
